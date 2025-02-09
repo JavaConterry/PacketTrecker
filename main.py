@@ -42,7 +42,7 @@ def update_map():
     m = folium.Map(location=[0, 0], zoom_start=2)
     for route in route_history:
         coords = [(lat, lon) for _, lat, lon, _ in route]
-        folium.PolyLine(coords, color="blue", weight=0.2, opacity=0.7).add_to(m)  # Adjusted thickness
+        folium.PolyLine(coords, color="blue", weight=0.5, opacity=1).add_to(m)  # Adjusted thickness
         
         for ip, lat, lon, location in route:
             folium.CircleMarker(
